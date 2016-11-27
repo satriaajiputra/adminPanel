@@ -1,0 +1,279 @@
+/*
+
+Coded By: MangCoding Solution;
+Design By: Riko Sapto Dimo;
+Created At: 27/11/16;
+
+*/
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/ProximaNovaRegular.otf');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('../fonts/ProximaNovaSemibold.otf');
+	font-weight: 600;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background: #f1f5f6;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Proxima Nova', sans-serif;
+	font-weight: 600;
+}
+
+
+/* Container */
+.navbar-top>.container {
+	max-width: 1222px;
+	width: auto;
+}
+
+/* Navbar */
+.navbar-top {
+	background: #fff;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 20px;
+	box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.05);
+}
+.navbar-top li.menu-paginator>a {
+	color: #3c4953;
+	font-size: 24px;
+	display: inline-block;
+	padding: 25px 0;
+	vertical-align: middle;
+	border: none !important;
+}
+.navbar-top li.menu-paginator>span, .navbar-top li.profile>a {
+	font-family: 'Proxima Nova', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	margin: 0px 20px;
+	color: #9aa5ae;
+}
+.navbar-top li.project-button>a {
+	background: #14abf4;
+	border: 1px solid #14abf4;
+	border-radius: 17.5px;
+	padding: 8px 21.5px;
+	margin: 19px 50px 0px 50px;
+	font-family: 'Proxima Nova', sans-serif;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: background .3s ease, color .3s ease;
+}
+.navbar-top li.project-button>a:hover, .navbar-top li.project-button>a:focus, .navbar-top li.menu-paginator>a:hover {
+	border: 1px solid #14abf4;
+	color: #14abf4;
+}
+.navbar-top li.project-button>a>span {
+	font-size: 18px;
+}
+.navbar-top li.profile>a>.thumbnail {
+	padding: 0;
+	border: none;
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	float: left;
+	margin: 0px 20px 0px 0px;
+	vertical-align: middle;
+}
+.navbar-top li.profile>a {
+	font-weight: 600;
+	color: #3c4953;
+}
+.navbar-top li.profile>a>span {
+	line-height: 50px;
+}
+.navbar-brand {
+	font-family: 'Proxima Nova', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	margin: 30px 0 0;
+	padding: 0;
+	color: #3db8db !important;
+}
+.navbar-toggle {
+	border:none;
+}
+.navbar-toggle>span {
+	background-color: #d2d2d2 !important;
+}
+.navbar-toggle:hover, .navbar-toggle:focus {
+	background: transparent !important;
+}
+
+/* Search Form */
+.search-form {
+	max-width: 185px;
+	margin: 22px 0;
+}
+.search-form>.form-group {
+	background: transparent;
+	position: relative;
+}
+.search-form>.form-group>input {
+	border-radius: 0;
+	box-shadow: none;
+	font-family: 'Proxima Nova';
+	font-weight: 400;
+	font-size: 17px;
+	color: #9aa5ae;
+	border: none;
+}
+.search-form>.form-group:before {
+	content: url('../img/icon-search.png');
+	width: 15px;
+	font-family: FontAwesome;
+	font-size: 18px;
+	color: #9aa5ae;
+	position: absolute;
+	top: 52%;
+	transform: translate(0%, -52%);
+	left: -15px;
+}
+
+/* Content */
+#content {
+	padding-bottom: 50px;
+}
+#content>.container {
+	max-width: 1325px;
+	width: auto;
+}
+
+/* Box */
+.box {
+	background: #fff;
+	border-radius: 5px;
+	margin-top: 30px;
+	box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.05);
+}
+.box>h2.title, .box>h3.author {
+	padding: 32px 16px 39px 16px;
+	color: #3c4953;
+	font-size: 22px;
+	display: block;
+	text-align: center;
+}
+.box>h3.author {
+	font-size: 22px;
+	padding: 30px 16px;
+}
+.box>h3.author:before {
+	content: url('../img/icon.png');
+	margin-right: 28px;
+	width: 9px;
+	height: 33px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.box-body:before {
+	content: '';
+	border-top: 1px solid #d3d9db;
+	padding-bottom: 10px;
+	display: block;
+}
+.box-body {
+	padding: 0px 8px 10px 8px;
+}
+.box-info {
+	width: 50%;
+	border-right: 1px solid #d3d9db;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 8px 5px 20px 5px;
+}
+.box-info>h4.title {
+	font-size: 20px;
+	color: #939fa9;
+	margin-bottom: 14px;
+}
+.box-info>span {
+	font-size: 18px;
+	font-family: 'Proxima Nova', sans-serif;
+	font-weight: 600;
+	color: #3c4953;
+}
+.no-border {
+	border: none;
+}
+
+/* Easy Pie Chart */
+.chart {
+  position: relative;
+  display: inline-block;
+  width: 148px;
+  height: 148px;
+  text-align: center;
+}
+.chart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.progres {
+	text-align: center;
+}
+.percent {
+  display: inline-block;
+  line-height: 148px;
+  z-index: 2;
+  font-size: 36px;
+  font-family: 'Proxima Nova', sans-serif;
+  color: #3c4953;
+}
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em;
+}
