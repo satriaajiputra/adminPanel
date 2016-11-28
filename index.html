@@ -65,7 +65,7 @@
 						<div class="box">
 							<h2 class="title">Web Design For Adobe</h2>
 							<div class="progres">
-								<span class="chart" data-percent="65">
+								<span class="chart" data-percent="65" data-index="0">
 									<span class="percent"></span>
 								</span>
 								<div class="clearfix"></div>
@@ -88,7 +88,7 @@
 						<div class="box">
 							<h2 class="title">Web Design For Adobe</h2>
 							<div class="progres">
-								<span class="chart" data-percent="65">
+								<span class="chart" data-percent="65" data-index="1">
 									<span class="percent"></span>
 								</span>
 								<div class="clearfix"></div>
@@ -111,7 +111,7 @@
 						<div class="box">
 							<h2 class="title">Web Design For Adobe</h2>
 							<div class="progres">
-								<span class="chart" data-percent="65">
+								<span class="chart" data-percent="65" data-index="2">
 									<span class="percent"></span>
 								</span>
 								<div class="clearfix"></div>
@@ -134,7 +134,7 @@
 						<div class="box">
 							<h2 class="title">Web Design For Adobe</h2>
 							<div class="progres">
-								<span class="chart" data-percent="65">
+								<span class="chart" data-percent="65" data-index="3">
 									<span class="percent"></span>
 								</span>
 								<div class="clearfix"></div>
@@ -157,7 +157,7 @@
 						<div class="box">
 							<h2 class="title">Web Design For Adobe</h2>
 							<div class="progres">
-								<span class="chart" data-percent="65">
+								<span class="chart" data-percent="65" data-index="4">
 									<span class="percent"></span>
 								</span>
 								<div class="clearfix"></div>
@@ -180,7 +180,7 @@
 						<div class="box">
 							<h2 class="title">Web Design For Adobe</h2>
 							<div class="progres">
-								<span class="chart" data-percent="65">
+								<span class="chart" data-percent="45" data-index="5">
 									<span class="percent"></span>
 								</span>
 								<div class="clearfix"></div>
@@ -203,7 +203,7 @@
 						<div class="box">
 							<h2 class="title">Web Design For Adobe</h2>
 							<div class="progres">
-								<span class="chart" data-percent="65">
+								<span class="chart" data-percent="15" data-index="6">
 									<span class="percent"></span>
 								</span>
 								<div class="clearfix"></div>
@@ -226,7 +226,76 @@
 						<div class="box">
 							<h2 class="title">Web Design For Adobe</h2>
 							<div class="progres">
-								<span class="chart" data-percent="65">
+								<span class="chart" data-percent="25" data-index="7">
+									<span class="percent"></span>
+								</span>
+								<div class="clearfix"></div>
+							</div>
+							<h3 class="author">John Pramonoang</h3>
+							<div class="box-body">
+								<div class="box-info pull-left">
+									<h4 class="title">Topic</h4>
+									<span>50 Topics</span>
+								</div>
+								<div class="box-info pull-right no-border">
+									<h4 class="title">Date</h4>
+									<span>5 Nov - 10 Nov</span>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="box">
+							<h2 class="title">Web Design For Adobe</h2>
+							<div class="progres">
+								<span class="chart" data-percent="45" data-index="8">
+									<span class="percent"></span>
+								</span>
+								<div class="clearfix"></div>
+							</div>
+							<h3 class="author">John Pramonoang</h3>
+							<div class="box-body">
+								<div class="box-info pull-left">
+									<h4 class="title">Topic</h4>
+									<span>50 Topics</span>
+								</div>
+								<div class="box-info pull-right no-border">
+									<h4 class="title">Date</h4>
+									<span>5 Nov - 10 Nov</span>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="box">
+							<h2 class="title">Web Design For Adobe</h2>
+							<div class="progres">
+								<span class="chart" data-percent="15" data-index="9">
+									<span class="percent"></span>
+								</span>
+								<div class="clearfix"></div>
+							</div>
+							<h3 class="author">John Pramonoang</h3>
+							<div class="box-body">
+								<div class="box-info pull-left">
+									<h4 class="title">Topic</h4>
+									<span>50 Topics</span>
+								</div>
+								<div class="box-info pull-right no-border">
+									<h4 class="title">Date</h4>
+									<span>5 Nov - 10 Nov</span>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="box">
+							<h2 class="title">Web Design For Adobe</h2>
+							<div class="progres">
+								<span class="chart" data-percent="25" data-index="10">
 									<span class="percent"></span>
 								</span>
 								<div class="clearfix"></div>
@@ -257,15 +326,28 @@
 		<script src="assets/plugins/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 		<script>
 		$(function() {
-			$('.chart').easyPieChart({
-				trackColor: '#d3d9db',
-				barColor: '#14abf4',
-				lineWidth: 4,
-				size: 148,
-				scaleColor: false,
-				onStep: function(from, to, percent) {
-					$(this.el).find('.percent').text(Math.round(percent));
+			var element = $('.chart');
+			var colors = ['#FD3865', '#14abf4', '#86F537', '#FF9939', '#E6F737', '#FF5C39', '#3049D7'];
+			var cIndex = 0; // index for colors
+			$.each(element, function(index) {
+				// detect if colors index > 7 then, colors index will change the value to 0 again
+				if(cIndex > 7) {
+					cIndex = 0;
 				}
+
+				// start bars 
+				$('.chart[data-index="'+index+'"]').easyPieChart({
+					trackColor: '#d3d9db',
+					barColor: colors[cIndex],
+					lineWidth: 4,
+					size: 148,
+					scaleColor: false,
+					onStep: function(from, to, percent) {
+						$(this.el).find('.percent').text(Math.round(percent));
+					}
+				});
+
+				cIndex++; // plus index
 			});
 		});
 		</script>
